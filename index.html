@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Calculator 9000</title>
+    <meta name="description" content="My Web Developer Portfolio Calculator">
+    <meta name="keywords" content="Back-End Developer, Portfolio, Skills, Calculator">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-light_blue.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link src="https://schulzmarcel.de/x/fonts/digital-7_mono.ttf">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <title>B1.0 Calculator</title>
+</head>
+<body>
+<div class="container calc-container">
+    <div class="buttons">
+        <!--<div class="row">-->
+            <!--<button type="button" class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect science">Scientific</button>-->
+        <!--</div>-->
+        <div class="row">
+            <div class="mdl-textfield mdl-js-textfield ">
+                <input type="text" id="disp-inp" class="input-lg mdl-textfield__input" value="0" maxlength="10">
+                <input type="text" id="disp-ans" class ="input-lg mdl-textfield__input	" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clear-every">CE</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent operator div">&divide;</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent operator mult">&times;</button>
+            <button class="scientific">x<sup>2</sup></button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clear-field">C</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">7</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">8</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">9</button>
+            <button class="scientific">x<sup>y</sup></button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent operator min">&minus;</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">4</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">5</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">6</button>
+            <!--<button class="scientific">log n</button>-->
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent operator plus">&plus;</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">1</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">2</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">3</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent sqroot">&radic;</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color operand">0</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color decpoint">.</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--color plusmin ">&plusmn;</button>
+            <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent equals">&equals;</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

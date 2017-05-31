@@ -1,0 +1,70 @@
+body {
+    padding: 20px;
+    /*background: #fafafa;*/
+    position: relative;
+    background-image:url('./img/calc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "digital-7",Arial,sans-serif !important;
+
+}
+.calc-container {
+    width: 280px;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #fafafa !important;
+}
+
+.buttons{
+    margin: 0 auto;
+}
+.btn {
+    height: 64px !important;
+    font-size: 1.5em;
+}
+.operand{
+    /*background: #fafafa !important;*/
+}
+.decpoint,.plusmin{
+    /*background: #fafafa !important;*/
+}
+.science{
+    max-width: 90%;
+    /*width: 100px;*/
+    /*height: 40px;*/
+    /*text-align: left;*/
+}
+.row{
+    margin: 4px 4px 6px 4px;
+}
+.mdl-textfield {
+    width: 100%;
+    padding: 10px 0 0;
+}
+
+.mdl-textfield input[type="text"] {
+    text-align: right;
+    font-size: 3em;
+    padding: 10px;
+    font-family: "digital-7",Arial,sans-serif !important;
+
+}
+#disp-inp{
+    text-align: left;
+    font-family: "digital-7",Arial,sans-serif !important;
+
+}
+
+.mdl-textfield input[type="text"]:disabled {
+    color: #000;
+}
+.widebody{
+
+}
+.scientific{
+    display: none;
+}
+.widebody .scientific{
+    display:initial;
+}
