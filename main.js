@@ -98,6 +98,10 @@ function eqResult(num1,num2, operator){
         default:
             break;
     }
+    if(result>99999999){
+        result = result.toExponential(5);
+    }
+    // result = result.toExponential(3);
     $('#disp-ans').val(result);
 }
 function displayInputs(){
