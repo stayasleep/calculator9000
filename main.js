@@ -70,11 +70,13 @@ function eqResult(num1,num2, operator){
         case "+":
             result=num1 + num2;
             inputArray=[];
+            checkResult(result);
             inputArray.push(result);
             break;
         case "−":
             result=num1-num2;
             inputArray=[];
+            checkResult(result);
             inputArray.push(result);
             break;
         case "÷":
@@ -87,22 +89,28 @@ function eqResult(num1,num2, operator){
             } else {
                 result = num1/num2;
                 inputArray=[];
+                checkResult(result);
                 inputArray.push(result);
             }
             break;
         case "×":
             result=num1*num2;
             inputArray=[];
+            checkResult(result);
             inputArray.push(result);
             break;
         default:
             break;
     }
-    if(result>99999999){
-        result = result.toExponential(5);
-    }
-    // result = result.toExponential(3);
+    // if(result.toString().length>7){
+    //     result = result.toExponential(4);
+    // }
     $('#disp-ans').val(result);
+}
+function checkResult(res){
+    if(res.toString().length>10){
+        result = res.toExponential(4);
+    }
 }
 function displayInputs(){
     $('#disp-inp').val(inputArray.join(""));
