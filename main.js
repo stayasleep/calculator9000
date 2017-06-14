@@ -1,7 +1,7 @@
-$(document).ready(initialize);
-
 var result;
 var inputArray=[];
+
+$(document).ready(initialize);
 
 function initialize(){
     $('.operand').click(numInput);
@@ -33,11 +33,18 @@ function numInput(){
         inputArray.push("");
     }
     tempNum = $(this).text();
-    inputArray[inputArray.length-1]=inputArray[inputArray.length-1]+tempNum;
+    if(inputArray[inputArray.length-1].length<10){
+        inputArray[inputArray.length-1]=inputArray[inputArray.length-1]+tempNum;
+    }
+    //inputArray[inputArray.length-1]=inputArray[inputArray.length-1]+tempNum;
+    tempNums = inputArray[inputArray.length-1];
     displayInputs();
 }
 function operationInput(){
     tempOp=$(this).text();
+    if(inputArray[inputArray.length-1].length>10){
+        parseFloat(inputArray[inputArray.length-1]).toExponential(5);
+    }
     if (inputArray.length === 3 ){
         equalsHandler();
         inputArray.push(tempOp);
@@ -58,7 +65,7 @@ function equalsHandler(){
         numTwo = numOne;
     }
     if (typeof(inputArray[inputArray.length-1]) === 'number'){
-        numTwo = tempNum;
+        numTwo = tempNums;
         operator = tempOp;
     }
     eqResult(numOne,numTwo,operator);
@@ -81,7 +88,7 @@ function eqResult(num1,num2, operator){
             break;
         case "÷":
             if (num2 === 0){
-                $('#disp-ans').val("Invalid Operation");
+                $('#disp-ans').text("Invalid Operation");
                 setTimeout(function(){
                     clearEverything();
                 },900);
@@ -102,18 +109,16 @@ function eqResult(num1,num2, operator){
         default:
             break;
     }
-    // if(result.toString().length>7){
-    //     result = result.toExponential(4);
-    // }
-    $('#disp-ans').val(result);
+    $('#disp-ans').text(result);
 }
 function checkResult(res){
     if(res.toString().length>10){
-        result = res.toExponential(4);
+        result = res.toExponential(5);
     }
 }
 function displayInputs(){
-    $('#disp-inp').val(inputArray.join(""));
+    $('#disp-inp').text(inputArray.join(""));
+    //$('#disp-inp').val(inputArray.join(""));
 }
 function clearEverything(){
     inputArray=[];
@@ -121,8 +126,8 @@ function clearEverything(){
     tempNum = "";
     tempOp = "";
     tempDec="";
-    $('#disp-inp').val("");
-    $('#disp-ans').val("");
+    $('#disp-inp').text("");
+    $('#disp-ans').text("");
 }
 function clearPrevious(){
     if (inputArray.length >1){
@@ -136,7 +141,9 @@ function decimals(){
     var tempDec = $(this).text();
     if (inputArray.length === 2) {
         inputArray.push("0.");
-    } else if (inputArray[inputArray.length-1].indexOf(".") === -1){
+    } else if(inputArray.length === 0) {
+        inputArray.push("0.");
+    }else if (inputArray[inputArray.length-1].indexOf(".") === -1){
         inputArray[inputArray.length-1] = inputArray[inputArray.length-1]+tempDec;
     } else {
         return

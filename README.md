@@ -2,7 +2,7 @@ SteinCalc9000
 ======
 ### Summary 
 An advanced operations (non-scientific), 10-digit display calculator.  Provides scientific notation \
-accurate up to 4 significant figures after the decimal point.  Use *CE* to clear everything and *C* to clear \
+accurate up to 5 significant figures after the decimal point.  Use *CE* to clear everything and *C* to clear \
 the previous entry.  The calculator9000 handles basic operations plus square root and &plusmn; for immediate \
 conversion of an inputted value.
 

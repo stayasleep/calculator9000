@@ -47,30 +47,30 @@ body {
     display: flex;
     justify-content: center;
 }
-.mdl-textfield {
-    width: 100%;
-    padding: 10px 0 0;
-}
 
-.mdl-textfield input[type="text"] {
+/*.mdl-textfield {*/
+    /*width: 100%;*/
+    /*padding: 10px 0 0;*/
+/*}*/
+.screen{
+/*.mdl-textfield input[type="text"] {*/
+    height: 5vh;
+    width: 100%;
     text-align: right;
     font-size: 2em;
-    padding: 10px;
+    padding: 10px 0;
     font-family: "digital-7",Arial,sans-serif !important;
-
 }
 #disp-inp{
-    /*text-align: left;*/
+    word-wrap: break-word;
+    display: initial;
+    text-align: left;
     font-family: "digital-7",Arial,sans-serif !important;
-
 }
 
-.mdl-textfield input[type="text"]:disabled {
-    color: #000;
-}
-.widebody{
-
-}
+/*.mdl-textfield input[type="text"]:disabled {*/
+    /*color: #000;*/
+/*}*/
 .scientific{
     display: none;
 }
