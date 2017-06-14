@@ -1,4 +1,4 @@
-calculator9000
+SteinCalc9000
 ======
 ### Summary 
 An advanced operations (non-scientific), 10-digit display calculator.  Provides scientific notation \

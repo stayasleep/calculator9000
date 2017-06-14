@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Calculator 9000</title>
     <meta name="description" content="My Web Developer Portfolio Calculator">
     <meta name="keywords" content="Back-End Developer, Portfolio, Skills, Calculator">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SteinCalc 9000</title>
+    <link rel="shortcut icon" href="./calculator.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-light_blue.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -25,15 +26,14 @@
         <!--</div>-->
         <div class="row">
             <div class="mdl-textfield mdl-js-textfield ">
-                <input type="text" id="disp-inp" class="input-lg mdl-textfield__input" value="0" maxlength="10">
-                <input type="text" id="disp-ans" class ="input-lg mdl-textfield__input	" disabled>
+                <input type="text" id="disp-inp" class="input-lg mdl-textfield__input" value="0" maxlength="10" disabled>
+                <input type="text" id="disp-ans" class ="input-lg mdl-textfield__input" disabled>
             </div>
         </div>
         <div class="row">
             <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clear-every">CE</button>
             <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent operator div">&divide;</button>
             <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent operator mult">&times;</button>
-            <button class="scientific">x<sup>2</sup></button>
             <button type="button" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent clear-field">C</button>
         </div>
         <div class="row">

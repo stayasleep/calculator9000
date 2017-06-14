@@ -5,8 +5,13 @@ body {
     background-image:url('./img/calc.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: "digital-7",Arial,sans-serif !important;
+    font-family: "digital-7", 'Roboto', sans-serif, "Lucida Console", Monaco, monospace !important;
 
+
+}
+@font-face {
+    font-family: "digital-7";
+    src: url(calcfont.ttf);
 }
 .calc-container {
     width: 280px;
@@ -21,7 +26,8 @@ body {
 }
 .btn {
     height: 64px !important;
-    font-size: 1.5em;
+    font-size: initial;
+    font-family: "digital-7",Arial,sans-serif !important;
 }
 .operand{
     /*background: #fafafa !important;*/
@@ -37,6 +43,9 @@ body {
 }
 .row{
     margin: 4px 4px 6px 4px;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
 }
 .mdl-textfield {
     width: 100%;
@@ -51,7 +60,7 @@ body {
 
 }
 #disp-inp{
-    text-align: left;
+    /*text-align: left;*/
     font-family: "digital-7",Arial,sans-serif !important;
 
 }
