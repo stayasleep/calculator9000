@@ -6,8 +6,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "digital-7", 'Roboto', sans-serif, "Lucida Console", Monaco, monospace !important;
-
-
+}
+.title{
+    font-size: 1em !important;
+    font-weight: 600;
 }
 @font-face {
     font-family: "digital-7";
@@ -27,6 +29,7 @@ body {
 .btn {
     height: 64px !important;
     font-size: initial;
+    font-weight: 700;
     font-family: "digital-7",Arial,sans-serif !important;
 }
 .operand{
@@ -54,18 +57,18 @@ body {
 }
 .screen{
 /*.mdl-textfield input[type="text"] {*/
-    /*height: 5vh;*/
+    height: 5vh;
     width: 100%;
     text-align: right;
     font-size: 2em;
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     font-family: "digital-7",Arial,sans-serif !important;
 }
-#disp-inp{
-    word-wrap: break-word;
-    display: initial;
+.inp, .inp2{
+    /*word-wrap: break-word;*/
+    /*display: initial;*/
     text-align: left;
-    font-family: "digital-7",Arial,sans-serif !important;
+    /*font-family: "digital-7",Arial,sans-serif !important;*/
 }
 
 /*.mdl-textfield input[type="text"]:disabled {*/

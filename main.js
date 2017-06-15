@@ -84,8 +84,9 @@ function eqResult(num1,num2, operator){
         case "−":
             result=num1-num2;
             inputArray=[];
-            checkResult(result);
             inputArray.push(result);
+            checkResult(result);
+            // inputArray.push(result);
             break;
         case "÷":
             if (num2 === 0){
@@ -97,15 +98,17 @@ function eqResult(num1,num2, operator){
             } else {
                 result = num1/num2;
                 inputArray=[];
-                checkResult(result);
                 inputArray.push(result);
+                checkResult(result);
+                // inputArray.push(result);
             }
             break;
         case "×":
             result=num1*num2;
             inputArray=[];
-            checkResult(result);
             inputArray.push(result);
+            checkResult(result);
+            // inputArray.push(result);
             break;
         default:
             break;
@@ -118,7 +121,11 @@ function checkResult(res){
     }
 }
 function displayInputs(){
-    $('#disp-inp').text(inputArray.join(""));
+    if(inputArray.length === 3){
+        $('.inp2').text(inputArray[inputArray.length -1]);
+    }else {
+        $('.inp').text(inputArray.join(""));
+    }
     //$('#disp-inp').val(inputArray.join(""));
 }
 function clearEverything(){
@@ -127,8 +134,9 @@ function clearEverything(){
     tempNum = "";
     tempOp = "";
     tempDec="";
-    $('#disp-inp').text("");
-    $('#disp-ans').text("");
+    $('.screen').text("");
+    // $('#disp-inp').text("");
+    // $('#disp-ans').text("");
 }
 function clearPrevious(){
     if (inputArray.length >1){
