@@ -77,8 +77,9 @@ function eqResult(num1,num2, operator){
         case "+":
             result=num1 + num2;
             inputArray=[];
-            checkResult(result);
             inputArray.push(result);
+            checkResult(result);
+           // inputArray.push(result);
             break;
         case "−":
             result=num1-num2;
