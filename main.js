@@ -1,6 +1,6 @@
 var result;
 var inputArray=[];
-
+var displayArray=[];
 $(document).ready(initialize);
 
 function initialize(){
@@ -31,10 +31,13 @@ function numInput(){
     }
     if (isNaN(inputArray[inputArray.length-1])){
         inputArray.push("");
+        displayArray.push("");
     }
     tempNum = $(this).text();
     if(inputArray[inputArray.length-1].length<10){
         inputArray[inputArray.length-1]=inputArray[inputArray.length-1]+tempNum;
+        displayArray[displayArray.length-1]=displayArray[displayArray.length-1]+tempNum;
+
     }
     //inputArray[inputArray.length-1]=inputArray[inputArray.length-1]+tempNum;
     tempNums = inputArray[inputArray.length-1];
@@ -47,15 +50,20 @@ function operationInput(){
     }
     if (inputArray.length === 3 ){
         equalsHandler();
+        displayArray.push(tempOp);
         inputArray.push(tempOp);
     } else if (inputArray.length === 0){
         return;
     } else if (isNaN(inputArray[inputArray.length-1])){
+        displayArray[displayArray.length-1]=tempOp;
         inputArray[inputArray.length-1]=tempOp;
     } else{
+        displayArray.push(tempOp);
         inputArray.push(tempOp);
     }
     displayInputs();
+    $('.inp2').text("");
+
 };
 function equalsHandler(){
     var numOne=inputArray[0];
@@ -78,7 +86,10 @@ function eqResult(num1,num2, operator){
             result=num1 + num2;
             inputArray=[];
             inputArray.push(result);
+            displayArray=[];
             checkResult(result);
+            displayArray.push(result);
+            //inputArray.push(result);
            // inputArray.push(result);
             break;
         case "−":
@@ -86,6 +97,7 @@ function eqResult(num1,num2, operator){
             inputArray=[];
             inputArray.push(result);
             checkResult(result);
+            displayArray.push(result);
             // inputArray.push(result);
             break;
         case "÷":
@@ -100,6 +112,7 @@ function eqResult(num1,num2, operator){
                 inputArray=[];
                 inputArray.push(result);
                 checkResult(result);
+                displayArray.push(result);
                 // inputArray.push(result);
             }
             break;
@@ -108,6 +121,7 @@ function eqResult(num1,num2, operator){
             inputArray=[];
             inputArray.push(result);
             checkResult(result);
+            displayArray.push(result);
             // inputArray.push(result);
             break;
         default:
@@ -122,14 +136,18 @@ function checkResult(res){
 }
 function displayInputs(){
     if(inputArray.length === 3){
-        $('.inp2').text(inputArray[inputArray.length -1]);
+      //  $('.inp2').text(inputArray[inputArray.length -1]);
+        $('.inp2').text(displayArray[displayArray.length -1]);
+
     }else {
-        $('.inp').text(inputArray.join(""));
+        // $('.inp').text(displayArray[displayArray.length -1]);
+       $('.inp').text(displayArray.join(""));
     }
     //$('#disp-inp').val(inputArray.join(""));
 }
 function clearEverything(){
     inputArray=[];
+    displayArray=[];
     result = null;
     tempNum = "";
     tempOp = "";
@@ -173,4 +191,3 @@ function squareRoot(){
     }
     displayInputs();
 }
-//format the results for later time
