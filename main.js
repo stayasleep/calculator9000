@@ -170,7 +170,9 @@ function decimals(){
         inputArray.push("0.");
     } else if(inputArray.length === 0) {
         inputArray.push("0.");
+        displayArray.push("0.");
     }else if (inputArray[inputArray.length-1].indexOf(".") === -1){
+        displayArray[displayArray.length-1]=displayArray[displayArray.length-1]+tempDec;
         inputArray[inputArray.length-1] = inputArray[inputArray.length-1]+tempDec;
     } else {
         return
@@ -181,6 +183,7 @@ function plusMinus(){
     var strToNum = inputArray[inputArray.length-1];
     if (!isNaN(strToNum)){
         strToNum*=-1;
+        displayArray[displayArray.length-1]=strToNum.toString();
         inputArray[inputArray.length-1]=strToNum.toString();
     }
     displayInputs();
@@ -188,6 +191,7 @@ function plusMinus(){
 function squareRoot(){
     if (!isNaN(inputArray[inputArray.length-1]) && parseFloat(inputArray[inputArray.length-1])>=0){
         inputArray[inputArray.length-1]=Math.sqrt(inputArray[inputArray.length-1]);
+        displayArray[displayArray.length-1]=Math.sqrt(displayArray[displayArray.length-1]);
     }
     displayInputs();
 }
