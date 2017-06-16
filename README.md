@@ -1,5 +1,7 @@
 SteinCalc9000
 ======
+## View The Application @ [brianbernste.in](https://dev.brianbernste.in/calculator/)
+
 ### Summary 
 An advanced operations (non-scientific), 10-digit display calculator.  Provides scientific notation \
 accurate up to 5 significant figures after the decimal point.  Use *CE* to clear everything and *C* to clear \
@@ -25,6 +27,7 @@ conversion of an inputted value.
     - Partial Operand: 4* || 16
     - Missing Operation: 4 = || 4
     - Missing Operands:  ====== || 0 or Ready
+    
     
 ### Technologies
 - JavaScript
