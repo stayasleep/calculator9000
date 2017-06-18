@@ -96,6 +96,7 @@ function eqResult(num1,num2, operator){
             result=num1-num2;
             inputArray=[];
             inputArray.push(result);
+            displayArray=[];
             checkResult(result);
             displayArray.push(result);
             // inputArray.push(result);
@@ -111,6 +112,7 @@ function eqResult(num1,num2, operator){
                 result = num1/num2;
                 inputArray=[];
                 inputArray.push(result);
+                displayArray=[];
                 checkResult(result);
                 displayArray.push(result);
                 // inputArray.push(result);
@@ -120,6 +122,7 @@ function eqResult(num1,num2, operator){
             result=num1*num2;
             inputArray=[];
             inputArray.push(result);
+            displayArray=[];
             checkResult(result);
             displayArray.push(result);
             // inputArray.push(result);
