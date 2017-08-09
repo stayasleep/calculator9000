@@ -89,8 +89,6 @@ function eqResult(num1,num2, operator){
             displayArray=[];
             checkResult(result);
             displayArray.push(result);
-            //inputArray.push(result);
-           // inputArray.push(result);
             break;
         case "−":
             result=num1-num2;
@@ -99,7 +97,6 @@ function eqResult(num1,num2, operator){
             displayArray=[];
             checkResult(result);
             displayArray.push(result);
-            // inputArray.push(result);
             break;
         case "÷":
             if (num2 === 0){
@@ -115,7 +112,6 @@ function eqResult(num1,num2, operator){
                 displayArray=[];
                 checkResult(result);
                 displayArray.push(result);
-                // inputArray.push(result);
             }
             break;
         case "×":
@@ -125,7 +121,6 @@ function eqResult(num1,num2, operator){
             displayArray=[];
             checkResult(result);
             displayArray.push(result);
-            // inputArray.push(result);
             break;
         default:
             break;
@@ -156,8 +151,6 @@ function clearEverything(){
     tempOp = "";
     tempDec="";
     $('.screen').text("");
-    // $('#disp-inp').text("");
-    // $('#disp-ans').text("");
 }
 function clearPrevious(){
     if (inputArray.length >1){
