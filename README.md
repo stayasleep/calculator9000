@@ -1,6 +1,5 @@
 SteinCalc9000
 ======
-## View The Application @ [brianbernste.in](https://dev.brianbernste.in/calculator/)
 
 ### Summary 
 An advanced operations (non-scientific), 10-digit display calculator.  Provides scientific notation \
