@@ -1,6 +1,5 @@
 body {
     padding: 20px;
-    /*background: #fafafa;*/
     position: relative;
     background-image:url('./img/calc.jpg');
     background-repeat: no-repeat;
@@ -32,17 +31,10 @@ body {
     font-weight: 700;
     font-family: "digital-7",Arial,sans-serif !important;
 }
-.operand{
-    /*background: #fafafa !important;*/
-}
-.decpoint,.plusmin{
-    /*background: #fafafa !important;*/
-}
+
 .science{
     max-width: 90%;
-    /*width: 100px;*/
-    /*height: 40px;*/
-    /*text-align: left;*/
+
 }
 .row{
     margin: 4px 4px 6px 4px;
@@ -56,24 +48,16 @@ body {
     padding: 10px 0 0;
 }
 .screen{
-/*.mdl-textfield input[type="text"] {*/
     height: 5vh;
     width: 100%;
     text-align: right;
     font-size: 2em;
-    /*padding: 10px 0;*/
     font-family: "digital-7",Arial,sans-serif !important;
 }
 .inp, .inp2{
-    /*word-wrap: break-word;*/
-    /*display: initial;*/
     text-align: left;
-    /*font-family: "digital-7",Arial,sans-serif !important;*/
 }
 
-/*.mdl-textfield input[type="text"]:disabled {*/
-    /*color: #000;*/
-/*}*/
 .scientific{
     display: none;
 }
