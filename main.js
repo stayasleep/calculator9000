@@ -1,6 +1,9 @@
 var result;
 var inputArray=[];
 var displayArray=[];
+var tempNum;
+var tempNums;
+var tempOp;
 $(document).ready(initialize);
 
 function initialize(){
@@ -23,7 +26,7 @@ $('.science').click(function(){
     $('.calc-container').toggleClass('widebody');
     modeTextPointer=1-modeTextPointer;
     $(this).text(modeTextValues[modeTextPointer]);
-})};
+})}
 
 function numInput(){
     if (typeof inputArray[inputArray.length-1] === 'number'){
@@ -39,7 +42,6 @@ function numInput(){
         displayArray[displayArray.length-1]=displayArray[displayArray.length-1]+tempNum;
 
     }
-    //inputArray[inputArray.length-1]=inputArray[inputArray.length-1]+tempNum;
     tempNums = inputArray[inputArray.length-1];
     displayInputs();
 }
@@ -63,7 +65,6 @@ function operationInput(){
     }
     displayInputs();
     $('.inp2').text("");
-
 };
 function equalsHandler(){
     var numOne=inputArray[0];
@@ -134,27 +135,32 @@ function checkResult(res){
 }
 function displayInputs(){
     if(inputArray.length === 3){
-      //  $('.inp2').text(inputArray[inputArray.length -1]);
         $('.inp2').text(displayArray[displayArray.length -1]);
 
     }else {
-        // $('.inp').text(displayArray[displayArray.length -1]);
        $('.inp').text(displayArray.join(""));
     }
-    //$('#disp-inp').val(inputArray.join(""));
 }
 function clearEverything(){
     inputArray=[];
     displayArray=[];
     result = null;
     tempNum = "";
+    tempNums = "";
     tempOp = "";
-    tempDec="";
+    //tempDec="";
     $('.screen').text("");
 }
 function clearPrevious(){
-    if (inputArray.length >1){
+    if(inputArray.length === 3){
+        inputArray.pop(); //adjust input field
+        displayArray.pop();//adjust display view
+        $('.inp2').text(""); //clear the second input
+        tempNums = inputArray[0]; //let temp var for #+ operation be reset
+    }else if(inputArray.length >1){
         inputArray.pop();
+        displayArray.pop();
+        $('.inp2').text("");
     } else {
         clearEverything();
     }
@@ -164,7 +170,13 @@ function decimals(){
     var tempDec = $(this).text();
     if (inputArray.length === 2) {
         inputArray.push("0.");
+        displayArray.push("0.");
     } else if(inputArray.length === 0) {
+        inputArray.push("0.");
+        displayArray.push("0.");
+    }else if (inputArray.length === 1 && typeof inputArray[0] === "number"){
+        //operation result is of type number, so we erase the board as if new numerical input
+        clearEverything();
         inputArray.push("0.");
         displayArray.push("0.");
     }else if (inputArray[inputArray.length-1].indexOf(".") === -1){
