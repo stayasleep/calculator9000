@@ -1,9 +1,9 @@
-var result;
-var inputArray=[];
-var displayArray=[];
-var tempNum;
-var tempNums;
-var tempOp;
+let result;
+let inputArray=[];
+let displayArray=[];
+let tempNum;
+let tempNums;
+let tempOp;
 $(document).ready(initialize);
 
 function initialize(){
@@ -20,8 +20,8 @@ function initialize(){
 }
 
 function scienceMode(){
-    var modeTextValues = ['Scientific','Standard'];
-    var modeTextPointer = 0;
+    let modeTextValues = ['Scientific','Standard'];
+    let modeTextPointer = 0;
 $('.science').click(function(){
     $('.calc-container').toggleClass('widebody');
     modeTextPointer=1-modeTextPointer;
@@ -67,9 +67,9 @@ function operationInput(){
     $('.inp2').text("");
 };
 function equalsHandler(){
-    var numOne=inputArray[0];
-    var numTwo=inputArray[2];
-    var operator = inputArray[1];
+    let numOne=inputArray[0];
+    let numTwo=inputArray[2];
+    let operator = inputArray[1];
     if (inputArray.length === 2){
         numTwo = numOne;
     }
@@ -80,8 +80,8 @@ function equalsHandler(){
     eqResult(numOne,numTwo,operator);
 }
 function eqResult(num1,num2, operator){
-    var num1 = parseFloat(num1);
-    var num2 = parseFloat(num2);
+    let num1 = parseFloat(num1);
+    let num2 = parseFloat(num2);
     switch (operator){
         case "+":
             result=num1 + num2;
@@ -167,7 +167,7 @@ function clearPrevious(){
     displayInputs();
 }
 function decimals(){
-    var tempDec = $(this).text();
+    let tempDec = $(this).text();
     if (inputArray.length === 2) {
         inputArray.push("0.");
         displayArray.push("0.");
@@ -188,7 +188,7 @@ function decimals(){
     displayInputs();
 }
 function plusMinus(){
-    var strToNum = inputArray[inputArray.length-1];
+    let strToNum = inputArray[inputArray.length-1];
     if (!isNaN(strToNum)){
         strToNum*=-1;
         displayArray[displayArray.length-1]=strToNum.toString();
